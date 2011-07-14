@@ -36,5 +36,6 @@
 - (IBAction)decodeMacSelected:(id)sender;
 - (void)newPacket:(voidPtr)pkt;
 - (void)addPacketWithData:(voidPtr)pkt;
+- (IBAction)clearPackets:(id)sender;
 
 @end

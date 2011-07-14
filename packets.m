@@ -156,4 +156,9 @@
     // NSLog(@"Looking at row %i",row);
 
 }
+- (IBAction)clearPackets:(id)sender
+{
+	[self.zigbeePackets removeAllObjects];
+	[zigbeeView reloadData];
+}
 @end

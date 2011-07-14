@@ -1794,7 +1794,7 @@
 																<string key="NSFrameSize">{888, 245}</string>
 																<reference key="NSSuperview" ref="1009716605"/>
 																<reference key="NSWindow"/>
-																<reference key="NSNextKeyView" ref="24225893"/>
+																<reference key="NSNextKeyView" ref="711453404"/>
 																<bool key="NSEnabled">YES</bool>
 																<object class="NSTableHeaderView" key="NSHeaderView" id="247507345">
 																	<reference key="NSNextResponder" ref="24225893"/>
@@ -2310,7 +2310,7 @@
 												<string key="NSFrame">{{16, 333}, {890, 263}}</string>
 												<reference key="NSSuperview" ref="33583130"/>
 												<reference key="NSWindow"/>
-												<reference key="NSNextKeyView" ref="1009716605"/>
+												<reference key="NSNextKeyView" ref="24225893"/>
 												<int key="NSsFlags">562</int>
 												<reference key="NSVScroller" ref="711453404"/>
 												<reference key="NSHScroller" ref="627668178"/>
@@ -2322,7 +2322,7 @@
 											<object class="NSButton" id="266104619">
 												<reference key="NSNextResponder" ref="33583130"/>
 												<int key="NSvFlags">289</int>
-												<string key="NSFrame">{{801, 34}, {111, 32}}</string>
+												<string key="NSFrame">{{788, 34}, {124, 32}}</string>
 												<reference key="NSSuperview" ref="33583130"/>
 												<reference key="NSWindow"/>
 												<reference key="NSNextKeyView" ref="155669833"/>
@@ -2330,7 +2330,7 @@
 												<object class="NSButtonCell" key="NSCell" id="645446842">
 													<int key="NSCellFlags">67239424</int>
 													<int key="NSCellFlags2">134217728</int>
-													<string key="NSContents">Add Packet</string>
+													<string key="NSContents">Clear Packets</string>
 													<reference key="NSSupport" ref="1069871604"/>
 													<reference key="NSControlView" ref="266104619"/>
 													<int key="NSButtonFlags">-2038284033</int>
@@ -2347,6 +2347,7 @@
 												<string key="NSFrame">{{753, 17}, {156, 17}}</string>
 												<reference key="NSSuperview" ref="33583130"/>
 												<reference key="NSWindow"/>
+												<reference key="NSNextKeyView"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="52139655">
 													<int key="NSCellFlags">68288064</int>
@@ -2361,7 +2362,7 @@
 											<object class="NSButton" id="208576762">
 												<reference key="NSNextResponder" ref="33583130"/>
 												<int key="NSvFlags">289</int>
-												<string key="NSFrame">{{677, 34}, {124, 32}}</string>
+												<string key="NSFrame">{{664, 34}, {124, 32}}</string>
 												<reference key="NSSuperview" ref="33583130"/>
 												<reference key="NSWindow"/>
 												<reference key="NSNextKeyView" ref="266104619"/>
@@ -3793,14 +3794,6 @@
 					<int key="connectionID">831</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">addAlarm</string>
-						<reference key="source" ref="794596866"/>
-						<reference key="destination" ref="266104619"/>
-					</object>
-					<int key="connectionID">833</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">ledToggle1:</string>
 						<reference key="source" ref="295708740"/>
@@ -3969,14 +3962,6 @@
 					<int key="connectionID">899</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">addPacketButton:</string>
-						<reference key="source" ref="794596866"/>
-						<reference key="destination" ref="266104619"/>
-					</object>
-					<int key="connectionID">900</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">zigbeeTextView</string>
 						<reference key="source" ref="794596866"/>
@@ -4055,6 +4040,14 @@
 						<reference key="destination" ref="208576762"/>
 					</object>
 					<int key="connectionID">955</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">clearPackets:</string>
+						<reference key="source" ref="794596866"/>
+						<reference key="destination" ref="266104619"/>
+					</object>
+					<int key="connectionID">956</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -5163,11 +5156,11 @@
 							<reference ref="155669833"/>
 							<reference ref="754978826"/>
 							<reference ref="33767543"/>
-							<reference ref="266104619"/>
 							<reference ref="390504150"/>
-							<reference ref="208576762"/>
 							<reference ref="112300680"/>
 							<reference ref="721505105"/>
+							<reference ref="266104619"/>
+							<reference ref="208576762"/>
 						</object>
 						<reference key="parent" ref="615364755"/>
 					</object>
@@ -6706,7 +6699,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">955</int>
+			<int key="maxID">956</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -7033,10 +7026,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addPacketButton:</string>
+							<string>clearPackets:</string>
 							<string>decodeMacSelected:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -7046,12 +7041,17 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addPacketButton:</string>
+							<string>clearPackets:</string>
 							<string>decodeMacSelected:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">addPacketButton:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">clearPackets:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

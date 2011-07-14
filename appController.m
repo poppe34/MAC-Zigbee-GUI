@@ -125,8 +125,8 @@
 
 - (void)checkUSBAllTypes
 {
-    [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(runningCheckAlarms) userInfo:nil repeats:YES];
-    [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(checkZigbee) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(runningCheckAlarms) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(checkZigbee) userInfo:nil repeats:YES];
 }
 
 - (IBAction) checkZigbeeButton:(id)sender
